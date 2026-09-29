@@ -1,0 +1,24 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy_git/
+.deploy*/
+_multiconfig.yml
+
+# 本地工作区与记忆（含个人信息，绝不外传）
+.workbuddy/
+
+# 密钥 / 环境变量
+.env
+.env.*
+*.pem
+*.key
+*.p12
+
+# 编辑器
+.idea/
+.vscode/
+*.swp
