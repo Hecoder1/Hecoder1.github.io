@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hecoder1 的个人主页 —— 软件工程学生，记录项目、技术栈与学习笔记。">
+  <title>Hecoder1 · 个人主页</title>
+
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (!t) { t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="container nav-container">
+      <a href="#" class="logo" aria-label="返回顶部">
+        <span class="logo-terminal" aria-hidden="true"><span class="terminal-user">hecoder1</span><span class="terminal-path">@home:~</span><span class="terminal-symbol">$</span><span class="terminal-cursor"></span></span>
+      </a>
+
+      <div class="nav-actions">
+        <div class="nav-links" id="navLinks"></div>
+        <div class="nav-controls">
+          <button class="control-btn lang-toggle" id="langToggle" aria-label="切换语言">English</button>
+          <button class="control-btn theme-toggle" aria-label="切换主题">
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="intro" class="intro">
+    <div class="container flex-center column">
+      <div class="avatar-container" id="avatarBox">
+        <img alt="" class="avatar" id="avatarImg">
+        <div class="avatar-fallback" id="avatarFallback">H</div>
+        <div class="avatar-glow"></div>
+      </div>
+      <h1 class="gradient-text" id="introTitle">Hello, I'm Hecoder1</h1>
+      <p class="subtitle" id="introSubtitle"></p>
+      <div class="intro-contact-links" id="introLinks"></div>
+    </div>
+  </section>
+
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-head="projects">个人项目</h2>
+        <p data-sub="projects"></p>
+      </div>
+      <div class="stack" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <section id="repos" class="section-padding" style="background:var(--bg-sidebar)">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-head="repos">开源贡献</h2>
+        <p data-sub="repos"></p>
+      </div>
+      <div class="repo-grid" id="reposGrid"></div>
+      <div style="text-align:center;margin-top:24px">
+        <a class="control-btn" id="reposMore" href="https://github.com/Hecoder1" target="_blank" rel="noopener" style="display:inline-flex"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline" class="section-padding">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-head="timeline">时间轴</h2>
+        <p data-sub="timeline"></p>
+      </div>
+      <div class="timeline-container" id="timelineList"></div>
+    </div>
+  </section>
+
+  <section id="skills" class="section-padding" style="background:var(--bg-sidebar)">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-head="skills">技术栈</h2>
+        <p data-sub="skills"></p>
+      </div>
+      <div class="skills-wrapper" id="skillsGrid"></div>
+    </div>
+  </section>
+
+  <section id="knowledge" class="section-padding">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-head="knowledge">个人知识库</h2>
+        <p data-sub="knowledge"></p>
+      </div>
+      <div class="kb-grid" id="knowledgeGrid"></div>
+    </div>
+  </section>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/kb-toc.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
